@@ -45,13 +45,15 @@ public class Contatto {
         return eta;
     }
     
-    public boolean isOmonimo(Contatto altro) {
-        
-        return this.nome.equals(altro.getNome()) &&
-            this.cognome.equals(altro.getCognome());
-    }
+    
     
     public void stampaDati() {
         System.out.println(nome.charAt(0) + ". " + cognome + " #" + telefono + " - " + eta);
     }
+   
+    public boolean isOmonimo(Contatto altro) {
+        return this.getNome().equals(altro.getNome()) && this.getCognome().equals(altro.getCognome());
+    }
+    
+    
 }
