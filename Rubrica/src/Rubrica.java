@@ -17,25 +17,6 @@ public class Rubrica {
         }
     }
     
-    /**
-     * Conta quanti contatti in rubrica hanno un numero fisso (che inizia per 0)
-     * @return quanti contatti ha contato
-     */
-    public int contaNumeriFissi() {
-        
-        // devo contare quanti contatti hanno un numero fisso
-        int quanti = 0;
-        
-        for (Contatto c : contatti) {
-            
-            // ogni numero fisso inizia per 0, ho due modi per controllarlo
-            //if (c.getTelefono().startsWith("0")) 
-            if (c.getTelefono().charAt(0) == '0')
-                quanti++;
-        }
-        
-        return quanti;
-    }
     
     /**
      * Controlla se nella rubrica è già presente questo numero di telefono
@@ -192,6 +173,26 @@ public class Rubrica {
         }
     }
 
-    
-    
+    public int contaNumeriFissi() {
+        int cont = 0;
+        for (Contatto c : contatti) {
+            if (c.getTelefono().charAt(0) == '0') {
+                cont++;
+            }
+        }
+        return cont;
+    }
+
+    public boolean cercaDoppioni(String numero) {
+        int count = 0;
+        for (Contatto c : contatti) {
+            if (c.getTelefono().equals(numero)) {
+                count++;
+                if (count > 1) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
