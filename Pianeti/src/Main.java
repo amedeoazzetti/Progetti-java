@@ -45,6 +45,15 @@ public class Main {
         
         solare.rimuoviTutti(p9);
         solare.stampaPianeti();
+
+        Pianeta p10 = new Pianeta("NuovoPianeta", 2.0e24, 5.0e6, 1.0e11);
+        solare.aggiungiPianeta(p10);
+        solare.stampaPianeti();
+
+        solare.rimuovi(0);
+        solare.stampaPianeti();
+
+        System.out.println(p3.calcolaGravita());
     }
     
 }

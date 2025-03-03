@@ -54,5 +54,16 @@ public class Pianeta {
         
         System.out.println(this.nome + ": " + this.distanzaStella);
     }
+
+    // dichiarazione della costante di gravitazione universale
+    public static final double G = 6.67408e-11;
+
+    /**
+     * Calcola l'accelerazione di gravità del pianeta con formula Newton
+     * @return accelerazione di gravità
+     */
+    public double calcolaGravita() {
+        return G * this.massa / (this.raggio * this.raggio);
+    }
     
 }

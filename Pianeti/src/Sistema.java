@@ -152,4 +152,13 @@ public class Sistema {
         
         System.out.println("]");
     }
+
+    public boolean aggiungiPianeta(Pianeta nuovo) {
+        if (pianeti.size() < Integer.MAX_VALUE) {
+            pianeti.add(nuovo);
+            return true;
+        }
+        return false;
+    }
+    
 }
