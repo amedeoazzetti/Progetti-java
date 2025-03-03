@@ -183,7 +183,15 @@ public class Rubrica {
 //            return 0;
         });
 
-        
+
     }
+
+    public void stampaInizialiCognome() {
+        for (Contatto c : contatti) {
+            System.out.println(c.getNome().charAt(0) + ". " + c.getCognome());
+        }
+    }
+
+    
     
 }
