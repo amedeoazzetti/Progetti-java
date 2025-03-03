@@ -54,6 +54,8 @@ public class Main {
         solare.stampaPianeti();
 
         System.out.println(p3.calcolaGravita());
+
+        
     }
     
 }
